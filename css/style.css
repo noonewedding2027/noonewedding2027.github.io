@@ -3,8 +3,20 @@ body {
     font-family: Georgia, serif;
 }
 
+h1 {
+    font-family: Allura, serif;
+}
+
+h2, h3 {
+    font-family: Cormorant Garamond;
+}
+
 #home {
-    background-image: url("../images/landing_pic.jpeg");
+    background-image: linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.55), /*Creating a gradient overlay before the background image, good for readable text*/
+        rgba(0,0,0,0.35)
+    ), url("../images/landing_pic.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -19,13 +31,14 @@ body {
 }
 
 #home h1 {
-    font-size: 38px;
+    font-size: 55px;
     margin: 0;
 }
 
 #home p {
-    font-size: 16px;
-    margin: 10px;
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: Cormorant Garamond, serif;
 }
 
 header {
@@ -34,7 +47,10 @@ header {
     left: 0;
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.25);
 }
+
 
 nav {
     display: flex;
@@ -44,13 +60,61 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: ivory;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: Cormorant Garamond, serif;
+    color: #cdb491;
+    font-size: 30px;
+    font-weight: bolder;
     font-style: italic;
-    transition: color 0.9s ease;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
 }
 
 nav a:hover {
-    color: darkred
+    color: #a34545;
+    text-shadow: 1px 1px 2px black; /*h offset, v offset, blur, shadow color*/
+}
+
+
+
+
+
+section {
+    padding: 250px 10%;
+}
+
+#story {
+    background-color: #f8f5ef;
+}
+
+#info {
+    background-color: white;
+}
+
+#countdown {
+    background-color: #f8f5ef
+}
+
+#travel {
+    background-color: #white;
+}
+
+#rsvp {
+    background-color: #f8f5ef
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 60px auto;
+    width: 60%;
+    color: #cdb491;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #cdb491;
 }
