@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main a {
+    color: #5a3b2f;
+}
+
 body {
     margin: 0;
     font-family: Cormorant, serif;
