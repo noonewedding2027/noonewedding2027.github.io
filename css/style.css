@@ -1,6 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Georgia, serif;
+    font-family: Cormorant, serif;
 }
 
 h1 {
@@ -11,11 +15,30 @@ h2, h3 {
     font-family: Cormorant Garamond;
 }
 
+section h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+    color: #7a5c3e;
+    margin: 75px 0 40px;
+}
+
+section:not(#home) p {
+    font-family: Cormorant Garamond;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #5a3b2f;
+    max-width: 800px;
+    margin: 0 auto 1.2em;
+
+}
+
 #home {
     background-image: linear-gradient(
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.55), /*Creating a gradient overlay before the background image, good for readable text*/
-        rgba(0,0,0,0.35)
+        rgba(25,0,0,0.1),
+        rgba(25,0,0,0.25), /*Creating a gradient overlay before the background image, good for readable text*/
+        rgba(25,0,0,0.1)
     ), url("../images/landing_pic.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,7 +64,62 @@ h2, h3 {
     font-family: Cormorant Garamond, serif;
 }
 
+#story p + p {
+    text-indent: 2em;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#info h2 {
+    grid-column: 1 / -1;
+}
+
+#info h3 {
+    font-size: 30px;
+    color: #5a3b2f;
+    font-style: italic;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#info > div {
+    background-color: #f8f5ef;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #cdb491;
+}
+
+.church-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
+.church2-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
+.polish-home-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
+.hall-img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -49,8 +127,32 @@ header {
     padding: 20px;
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color 0.4s ease;
+    z-index: 10; 
 }
 
+#header-countdown {
+    font-family: Cormorant Garamond, serif;
+    font-size: 30px;
+    font-style: italic;
+    color: #cdb491;
+    white-space: nowrap;  /* never breaks onto two lines */
+    transition: color 0.4s ease;
+}
+
+header.scrolled #header-countdown {
+    color: #7a5c3e
+}
+
+@media (max-width: 1400px) {
+    #header-countdown {
+        display: none; /* only displays on large enough screens*/
+    }
+}
+
+header.scrolled {
+    background-color: rgba(205, 180, 145, 0.35);
+}
 
 nav {
     display: flex;
@@ -73,12 +175,18 @@ nav a:hover {
     text-shadow: 1px 1px 2px black; /*h offset, v offset, blur, shadow color*/
 }
 
+header.scrolled nav a {
+    color: black;
+}
 
 
-
+header.scrolled nav a:hover {
+    color: #a34545;
+    text-shadow: none;
+}
 
 section {
-    padding: 250px 10%;
+    padding: 10px 10% 100px;
 }
 
 #story {
@@ -90,17 +198,16 @@ section {
 }
 
 #countdown {
-    background-color: #f8f5ef
+    background-color: #f8f5ef;
 }
 
 #travel {
-    background-color: #white;
+    background-color: white; 
 }
 
 #rsvp {
-    background-color: #f8f5ef
+    background-color: #f8f5ef;
 }
-
 
 .divider {
     display: flex;
@@ -118,3 +225,4 @@ section {
     height: 1px;
     background-color: #cdb491;
 }
+
