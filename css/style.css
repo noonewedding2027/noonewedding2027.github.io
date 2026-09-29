@@ -226,3 +226,13 @@ section {
     background-color: #cdb491;
 }
 
+footer {
+    text-align: center;
+    font-size: 16px;
+    color: #7a5c3e;
+    margin: 75px 0 40px;
+}
+
+footer h3 {
+    text-decoration: underline;
+}
