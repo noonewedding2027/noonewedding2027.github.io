@@ -6,4 +6,4 @@
 *The site will be hosted [HERE](https://noonewedding2027.github.io)*
 
 
-**NOTE**: Site construction in progress as of 9/4/2026, all files written by Daniel Noone. 
+**NOTE**: Site construction in progress as of 9/4/2026, all contents written by Daniel Noone. 

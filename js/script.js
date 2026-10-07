@@ -1,3 +1,24 @@
+// PASSWORD GATE
+const PASSWORD = "";
+
+document.getElementById("gate-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // stops the form from reloading the page
+
+    const guess = document.getElementById("gate-input").value.trim().toLowerCase();
+
+    if (guess === PASSWORD) {
+        document.documentElement.classList.add("unlocked");
+        try {
+            localStorage.setItem("unlocked", "yes"); // remember this guest
+        } catch (e) {}
+    } else {
+        document.getElementById("gate-error").textContent = "Incorrect password, please try again.";
+    }
+});
+
+
+// PASSWORD GATE END
+
 // find first element w/ CSS selector "header"
 const header = document.querySelector("header");
 

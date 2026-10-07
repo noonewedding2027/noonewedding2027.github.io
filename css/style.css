@@ -1,3 +1,59 @@
+/*PASSWORD GATE -> not really secure LOL*/
+html:not(.unlocked) body > *:not(#gate) {
+    display: none;
+}
+
+html.unlocked #gate {
+    display: none;
+}
+
+#gate {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f5ef;
+    color: #5a3b2f;
+    font-family: Cormorant Garamond, serif;
+    text-align: center;
+}
+
+#gate h1 {
+    font-size: 55px;
+    margin: 0 0 10px;
+}
+
+#gate h2 {
+    font-size: 30px;
+    margin: 0 0 10px;
+    font-style: italic;
+}
+
+#gate p {
+    font-size: 22px;
+}
+
+#gate input, #gate button {
+    font-family: inherit;
+    font-size: 20px;
+    padding: 8px 16px;
+    border: 1px solid #cdb491;
+    margin: 5px;
+}
+
+#gate button {
+    background-color: #cdb491;
+    color: white;
+    cursor: pointer;
+}
+
+#gate-error {
+    color: #a34545;
+}
+
+/*=== === === === === === === === === ===*/
+
 html {
     scroll-behavior: smooth;
 }
@@ -15,8 +71,9 @@ h1 {
     font-family: Allura, serif;
 }
 
-h2, h3 {
+h2:not(.gate-sub), h3 {
     font-family: Cormorant Garamond;
+    text-decoration: underline;
 }
 
 section h2 {
@@ -89,7 +146,17 @@ section:not(#home) p {
     text-decoration: underline;
 }
 
-#info > div {
+#info > div:not(.card) {
+    grid-column: 1 / -1;
+}
+
+#info > div:not(.card) p {
+    text-align: left;
+    margin-left: 0;
+    max-width: none;
+}
+
+#info > div.card {
     background-color: #f8f5ef;
     padding: 40px;
     text-align: center;
@@ -114,10 +181,32 @@ section:not(#home) p {
     margin: 0 auto 20px;
 }
 
+
+
 .hall-img {
     display: block;
     max-width: 100%;
     margin: 0 auto 20px;
+}
+
+strong {
+    font-size: 25px;
+    color: #a34545;
+    text-decoration:double underline;
+}
+
+.mass-guide {
+    max-width: 1500px;
+    padding-left: 1.2em;
+}
+
+.mass-guide li {
+    font-family: Cormorant Garamond, serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #5a3b2f;
+    margin-bottom: 0.6em;
 }
 
 header {
@@ -239,4 +328,44 @@ footer {
 
 footer h3 {
     text-decoration: underline;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative; /* menu positions itself relative to this */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;          /* starts right below the main link */
+    left: 0;
+    flex-direction: column;
+    background-color: #f8f5ef;
+    border: 1px solid #cdb491;
+    min-width: 220px;
+    padding: 8px 0;
+    z-index: 20;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: flex;
+}
+
+header nav .dropdown-menu a {
+    font-size: 22px;
+    color: #5a3b2f;
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+header nav .dropdown-menu a:hover {
+    color: #a34545;
+    text-shadow: none;
+    background-color: rgba(205, 180, 145, 0.25);
+}
+
+html {
+    scroll-padding-top: 90px; /* stops the fixed header from covering jump targets */
 }

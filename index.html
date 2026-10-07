@@ -8,6 +8,14 @@
 
     <title>Daniel & Patrycja</title>
 
+    <script>
+        try {
+            if {localStorage.getItem("unlocked") === "yes"} {
+                document.documentElement.classList.add("unlocked");
+            }
+        } catch (e) {}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -18,12 +26,32 @@
 
 <body>
 
+    <div id = "gate">
+        <h1>Daniel i Patrycja — 2027</h1>
+        <h2 class = "gate-sub">Nasza historia zaczyna się tutaj</h2>
+        <p>Please enter the password from your invitation</p>
+        <form id = "gate-form">
+            <input type = "password" id = "gate-input" placeholder="Password">
+            <button type = "submit">Enter</button>
+        </form>
+        <p id = "gate-error"></p>
+    </div>
+
     <!-- Navigation -->
     <header>
         <nav>
             <a href="#home">Home</a>
             <a href="#story">Our Story</a>
-            <a href="#info">Wedding Information</a>
+            <div class="dropdown">
+                <a href="#info">Wedding Information</a>
+                <div class="dropdown-menu">
+                    <a href="#ceremony-details">Ceremony Details</a>
+                    <a href="#schedule">Schedule</a>
+                    <a href="#dress">Dress</a>
+                    <a href="#gifts">Registry/Gifts</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
             <a href="#travel">Travel & Accommodations</a>
             <a href="#rsvp">RSVP</a>  
         </nav>
@@ -88,7 +116,7 @@
             <h2>The Wedding</h2>
 
 
-            <div>
+            <div class = "card">
                 <h3>Ceremony</h3>
                 <p>
                     <a href="https://stmarysoswego.com/">St. Mary Of The Assumption Parish & Shrine</a>
@@ -107,7 +135,7 @@
             </div>
 
 
-            <div>
+            <div class = "card">
                 <h3>Reception</h3>
                 <p>
                     Fulton Polish Home Main Hall
@@ -131,6 +159,43 @@
 
                 <img src="images/fulton_home.jpg" alt="FultonPolishHome" class="polish-home-img">
                 <img src="images/main_hall.jpg" alt="FultonPolishHomeInterior" class="hall-img">
+            </div>
+
+            <div id = "ceremony-details">
+                <h2>Ceremony Details</h2>
+
+                <h3>Marriage Rite & Nuptial Mass</h3>
+
+                <p>
+                   St. Mary's is an aspotolate of the Institute of Christ the King Sovereign Priest, where the primary form of the liturgy is the Extraordinay Form or the Traditional Latin Mass.
+                   If you are someone who is new to it, here is what to expect at a glance:
+                </p>
+
+                <ul class = "mass-guide">
+                    <li><strong>Duration:</strong> The Marriage Rite is followed by a full Nuptial Mass, about 2 hours total (ending ~3pm).</li>
+                    <li><strong>Language:</strong> The majority of the ceremony/Mass will be in Latin, with parts such as the Sermon/Homily in English.</li>
+                    <li><strong>Following Along:</strong> Programs will be provided to help with knowing when to sit/stand/kneel, along with English translations. Feel free to also just follow those around you!</li>
+                    <li><strong>Communion:</strong> For Catholics who are properly disposed, received kneeling at the altar rail and on the tongue. Otherwise, feel free to approach and cross your arms over your chest to receive a blessing.</li>
+                    <li><strong>Music:</strong> The Nuptial Mass will be a High Mass &mdash; meaning that pretty much everything is sund and/or chanted! The majority of music will be in the form of Gregorian Chant. </li>
+                    <li><strong>Dress:</strong> The Mass is meant to be reverent toward our Lord, so modest clothing is requested. Many men choose to wear suits, and many women choose to veil. </li>
+                    <li><strong>Extra Resources:</strong> If you are interested, there is a more in depth Latin Mass guide <a href="https://guidecatholic.com/blog/traditional-latin-mass-guide/">here</a>, which explains the mass in more detail! Another good read <a href = "https://icksp.org.uk/institute/traditional-latin-mass/">here!</a></li>
+                </ul>
+            </div>
+
+            <div id = "schedule">
+                <h2>Schedule</h2>
+            </div>
+
+            <div id = "dress">
+                <h2>Dress</h2>
+            </div>
+
+            <div id = "gifts">
+                <h2>Registry/Gifts</h2>
+            </div>
+
+            <div id = "faq">
+                <h2>FAQ</h2>
             </div>
          </section>
 
