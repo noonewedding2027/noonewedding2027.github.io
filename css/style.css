@@ -189,7 +189,7 @@ section:not(#home) p {
     margin: 0 auto 20px;
 }
 
-strong {
+strong:not(.dress) {
     font-size: 25px;
     color: #a34545;
     text-decoration:double underline;
@@ -208,6 +208,169 @@ strong {
     color: #5a3b2f;
     margin-bottom: 0.6em;
 }
+
+/* SCHEDULE TIMELINE */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 900px;
+    position: relative;
+}
+
+/* The vertical line */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 170px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #cdb491;
+}
+
+.timeline li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 40px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* The dot on each event */
+.timeline li::before {
+    content: "";
+    position: absolute;
+    left: 170px;
+    top: 0.55em;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #cdb491;
+    transform: translateX(-50%);
+}
+
+.timeline .time {
+    text-align: right;
+    font-family: Cormorant Garamond, serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 600;
+    color: #a34545;
+}
+
+.timeline h4 {
+    margin: 0;
+    font-family: Cormorant Garamond, serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #5a3b2f;
+}
+
+#info .timeline .event p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Stack on phones */
+@media (max-width: 600px) {
+    .timeline::before,
+    .timeline li::before {
+        left: 0;
+    }
+
+    .timeline li {
+        grid-template-columns: 1fr;
+        padding-left: 25px;
+    }
+
+    .timeline .time {
+        text-align: left;
+    }
+}
+
+strong.dress {
+    color: #a34545;
+}
+
+#dress p.no-white {
+    margin-top: 50px;
+    text-align: center !important;
+}
+
+
+/* FAQ */
+#faq details {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    background-color: #f8f5ef;
+    border: 1px solid #cdb491;
+}
+
+#faq summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 24px;
+    cursor: pointer;
+    list-style: none;          /* removes the default triangle */
+    font-family: Cormorant Garamond, serif;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: italic;
+    color: #5a3b2f;
+    transition: color 0.3s ease;
+}
+
+/* Removes the default triangle in Safari */
+#faq summary::-webkit-details-marker {
+    display: none;
+}
+
+/* The + icon */
+#faq summary::after {
+    content: "+";
+    font-size: 32px;
+    font-style: normal;
+    color: #cdb491;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate + into × when open */
+#faq details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+#faq summary:hover {
+    color: #a34545;
+}
+
+#faq summary:focus-visible {
+    outline: 2px solid #cdb491;
+    outline-offset: 2px;
+}
+
+#faq details[open] summary {
+    border-bottom: 1px solid #cdb491;
+}
+
+#faq .answer {
+    padding: 18px 24px 4px;
+    background-color: white;
+}
+
+#faq .answer p {
+    max-width: none;
+    margin-left: 0;
+}
+
+#faq {
+    background-color: white;
+}
+
+#faq strong { text-decoration: none; }
 
 header {
     display: flex;
@@ -295,7 +458,7 @@ section {
 }
 
 #travel {
-    background-color: white; 
+    background-color: #f8f5ef; 
 }
 
 #rsvp {
@@ -341,7 +504,7 @@ footer h3 {
     top: 100%;          /* starts right below the main link */
     left: 0;
     flex-direction: column;
-    background-color: #f8f5ef;
+    background-color: rgb(248, 225, 193);
     border: 1px solid #cdb491;
     min-width: 220px;
     padding: 8px 0;

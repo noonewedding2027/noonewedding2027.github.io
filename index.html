@@ -10,7 +10,7 @@
 
     <script>
         try {
-            if {localStorage.getItem("unlocked") === "yes"} {
+            if (localStorage.getItem("unlocked") === "yes") {
                 document.documentElement.classList.add("unlocked");
             }
         } catch (e) {}
@@ -49,10 +49,10 @@
                     <a href="#schedule">Schedule</a>
                     <a href="#dress">Dress</a>
                     <a href="#gifts">Registry/Gifts</a>
-                    <a href="#faq">FAQ</a>
                 </div>
             </div>
             <a href="#travel">Travel & Accommodations</a>
+            <a href="#faq">FAQ</a>
             <a href="#rsvp">RSVP</a>  
         </nav>
 
@@ -73,7 +73,7 @@
             <p>2027</p>
         </section>
 
-        <div class="divider">✦</div>
+        <div class="divider">✠</div>
 
         <section id="story">
             <h2>Our Story</h2>
@@ -87,21 +87,21 @@
             </p>
 
             <p>
-                Ultimately, they had such a good time talking to eachother...literally nonstop...
-                that they agreed to meet eachother in person for the first time in Oswego, NY where Patrycja went to school at the time. 
+                Ultimately, they had such a good time talking to each other...literally nonstop...
+                that they agreed to meet each other in person for the first time in Oswego, NY where Patrycja went to school at the time. 
                 Driving from Geneseo, Daniel pulled in and couldn't believe his eyes as the most beautiful girl he had 
                 ever laid eyes on was standing there waiting for him to pick her up. From there, they went to dinner at Kiyomi (a Japanese restaurant in Oswego),
                 and then went on a walk along the river &mdash; it was so cold outside, they just HAD to hold hands to stay warm. They then spent the rest of the night talking and playing UNO, 
                 at which Patrycja kicked Dan's butt (which she still does to this day *shhhh*).
             </p>
 
-            <P>
-                Following this amazing first date, Patrycja and Dan would drive almost 2 hours one way to see eachother pretty frequently. 
+            <p>
+                Following this amazing first date, Patrycja and Dan would drive almost 2 hours one way to see each other pretty frequently. 
                 Since things were going so well, and they were noticing a very strong connection developing, Daniel thought it was about time to make it official and ask Patrycja to be his girlfriend.
                 The date was April 23rd, 2023 &mdash; Daniel and Patrycja were together in Oswego, so he thought this was a perfect time to ask her. However, knowing exactly what Daniel was going to ask, 
                 Patrycja stopped him and said: "Wait until tomorrow, because 23 is an ugly number." &mdash; Daniel obliged, and waited to pop the question until the 24th, to which Patka responded, 
                 "Make me a sandwich!". To this day, Patrycja claims she has never received her sandwich...they have since been inseparable. 
-            </P>
+            </p>
 
             <p>
                 Since then, Patrycja and Daniel have essentially done everything together. 
@@ -109,7 +109,7 @@
         </section>
 
 
-        <div class="divider">✦</div>
+        <div class="divider">✠</div>
 
         <!-- Wedding Information -->
          <section id="info">
@@ -167,7 +167,7 @@
                 <h3>Marriage Rite & Nuptial Mass</h3>
 
                 <p>
-                   St. Mary's is an aspotolate of the Institute of Christ the King Sovereign Priest, where the primary form of the liturgy is the Extraordinay Form or the Traditional Latin Mass.
+                   St. Mary's is an apostolate of the Institute of Christ the King Sovereign Priest, where the primary form of the liturgy is the Extraordinary Form or the Traditional Latin Mass.
                    If you are someone who is new to it, here is what to expect at a glance:
                 </p>
 
@@ -176,30 +176,132 @@
                     <li><strong>Language:</strong> The majority of the ceremony/Mass will be in Latin, with parts such as the Sermon/Homily in English.</li>
                     <li><strong>Following Along:</strong> Programs will be provided to help with knowing when to sit/stand/kneel, along with English translations. Feel free to also just follow those around you!</li>
                     <li><strong>Communion:</strong> For Catholics who are properly disposed, received kneeling at the altar rail and on the tongue. Otherwise, feel free to approach and cross your arms over your chest to receive a blessing.</li>
-                    <li><strong>Music:</strong> The Nuptial Mass will be a High Mass &mdash; meaning that pretty much everything is sund and/or chanted! The majority of music will be in the form of Gregorian Chant. </li>
+                    <li><strong>Music:</strong> The Nuptial Mass will be a High Mass &mdash; meaning that pretty much everything is sung and/or chanted! The majority of music will be in the form of Gregorian Chant. </li>
                     <li><strong>Dress:</strong> The Mass is meant to be reverent toward our Lord, so modest clothing is requested. Many men choose to wear suits, and many women choose to veil. </li>
-                    <li><strong>Extra Resources:</strong> If you are interested, there is a more in depth Latin Mass guide <a href="https://guidecatholic.com/blog/traditional-latin-mass-guide/">here</a>, which explains the mass in more detail! Another good read <a href = "https://icksp.org.uk/institute/traditional-latin-mass/">here!</a></li>
+                    <li><strong>Extra Resources:</strong> For those interested, there is a more in depth Latin Mass guide <a href="https://guidecatholic.com/blog/traditional-latin-mass-guide/">here</a>, which explains the mass in more detail! Another good read <a href = "https://icksp.org.uk/institute/traditional-latin-mass/">here!</a></li>
                 </ul>
             </div>
 
-            <div id = "schedule">
+            <div id="schedule">
                 <h2>Schedule</h2>
+
+                <ul class="timeline">
+                    <li>
+                        <span class="time">1:00 pm</span>
+                        <div class="event">
+                            <h4>Marriage Rite & Nuptial Mass</h4>
+                            <p>St. Mary of the Assumption, Oswego</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">~3:00 pm</span>
+                        <div class="event">
+                            <h4>Mass Ends</h4>
+                            <p>Check into accommodation (if any), then head to the Fulton Polish Home</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">3:30 pm</span>
+                        <div class="event">
+                            <h4>Cocktail Hour</h4>
+                            <p>At the Fulton Polish Home &mdash; light hors d'oeuvres will be served and the bar will be open.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">4:30 pm</span>
+                        <div class="event">
+                            <h4>Grand Entrance/Introductions</h4>
+                            <p>Introductions of newlyweds, wedding party, chleb i sól (bread & salt), & toast.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">~4:45 pm</span>
+                        <div class="event">
+                            <h4>Dinner</h4>
+                            <p>Catering provided by BLANK, available food <a href = "">here.</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">6:00 pm</span>
+                        <div class="event">
+                            <h4>First Dance & Parent Dances</h4>
+                            <p>Newlywed first dance, and individual dances with parents.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">6:15 pm</span>
+                        <div class="event">
+                            <h4>Dancing</h4>
+                            <p>Music by DJ Vox Polonia &mdash; mix of Polish and American music.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">8:30 pm</span>
+                        <div class="event">
+                            <h4>Cake Cutting</h4>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">9:00 pm</span>
+                        <div class="event">
+                            <h4>Oczepiny</h4>
+                            <p>Various wedding games, run by MC.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">9:30 pm</span>
+                        <div class="event">
+                            <h4>More Dancing!</h4>
+                            <p>More dancing follows the games, and a round of "late" night snacks served.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">11:30 pm</span>
+                        <div class="event">
+                            <h4>Last Dance & Send-Off</h4>
+                            <p>One last song is played and the newlyweds are sent off!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">12:00 am</span>
+                        <div class="event">
+                            <h4>Hall Closes</h4>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div id = "dress">
                 <h2>Dress</h2>
+                <p>
+                    ✟ As the ceremony is a Traditional Latin Mass, we kindly request that guests dress modestly for church: shoulders covered (a shawl or cardigan is perfectly fine), hemlines at or below the knee, 
+                    and no low necklines. Gentlemen, suits or jackets and ties are encouraged.
+                </p>
+                <p>
+                    ✟ Chapel veils are welcome but entirely optional.
+                </p>
+                <p>
+                    ✟ The wedding will be in mid July, so dress light where you can. You are fully welcome to shed the jacket or shawl at the reception and get comfortable for a night of dancing! 
+                </p>
+
+                <p class = "no-white">
+                    <strong class = "dress"> * We kindly ask 
+                    that guests refrain from wearing white or other similar light colors *</strong>
+                </p>
             </div>
 
             <div id = "gifts">
                 <h2>Registry/Gifts</h2>
+                <p>
+                    Your presence at our wedding is the greatest gift we could ask for! 
+                    If you would like to honor us with a gift, we would be most grateful for a contribution toward our honeymoon. 
+                    For this reason, a card box will be available for envelopes at the reception.
+                </p>
             </div>
 
-            <div id = "faq">
-                <h2>FAQ</h2>
-            </div>
          </section>
 
-         <div class="divider">✦</div>
+         <div class="divider">✠</div>
 
          <!-- Countdown
           <section id="countdown">
@@ -214,7 +316,7 @@
             </div>
           </section>
 
-          <div class="divider">✦</div> -->
+          <div class="divider">✠</div> -->
 
           <!-- Travel -->
            <section id="travel">
@@ -222,12 +324,130 @@
 
 
             <p>
-                Info about hotels, directions, parking, etc.
+                TBD &rightarrow; We are going to see about blocking off some rooms and discounted rates. Once we square this information away it will appear here. 
+                If you signed up for text message notification you will get one when it is posted. This wedding is VERY DIY so please bear with us! :) 
             </p>
            </section>
 
 
-           <div class="divider">✦</div>
+           <div class="divider">✠</div>
+
+            <section id="faq">
+                <h2>FAQ</h2>
+
+                <details>
+                    <summary>When should I arrive?</summary>
+                    <div class="answer">
+                        <p>We suggest arriving around 15-30 minutes early as the ceremony/Mass is very likely to start on time. Allowing time to find a seat, use the restroom, 
+                            etc. will ensure that you are settled by the time everything starts!
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Where do I park?</summary>
+                    <div class="answer">
+                        <p>The church has a parking lot, which can hold about 50 cars...otherwise there is copious street parking on the roads surrounding the church. 
+                            As for the Polish Home, there is a parking lot that is a bit larger than the one at the church which should be big enough for everyone to park!</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What do I do between the ceremony and reception?</summary>
+                    <div class="answer">
+                        <p>That depends on what your plans are following the reception: if you are staying in a hotel nearby, then feel free to go check in prior to heading to the Polish Home if you'd like which is about 20 minutes away (you'll still have plenty of time to enjoy the cocktail hour).
+                            If you are planning on heading home after the reception, then feel free to head right to the venue. There will be snacks and beverages available, and you can mingle while the wedding party is busy having 
+                            photos taken and making their way to the reception. 
+                        </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Are children invited?</summary>
+                    <div class="answer">
+                        <p>Absolutely! We welcome all the little ones to both the ceremony and reception! If during the ceremony they get fussy, do not worry about it, we are simply happy they are there too!</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Can I bring a plus-one?</summary>
+                    <div class="answer">
+                        <p>If there is one listed on your invitation, definitely! If not, feel free to contact us and we will gladly see whether or not we can accommodate more people.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What is the bar situation?</summary>
+                    <div class="answer">
+                        <p>The bar will be an open bar, and will be staffed all night long &mdash; so feel free to have a drink or two and get out on the dance floor!</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Do I need to be Catholic to attend the ceremony?</summary>
+                    <div class="answer">
+                    <p>Absolutely not, all are welcome to attend no matter what! Simply refrain from receiving Communion or go up for a blessing when the time comes.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Can I take pictures?</summary>
+                    <div class="answer">
+                    <p>During the ceremony we request that individual pictures be kept to a minimum to maintain the reverence of the Mass and Marriage Rite. During the reception &rightarrow; Absolutely! &mdash; 
+                        We will not be having an official photographer/videographer for the reception, but will instead have a QR code that guests can scan to upload pictures & videos throughout the night!
+                    </p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Will there be air-conditioning?</summary>
+                    <div class="answer">
+                        <p>At the church, unfortunately no since the building itself is over 100 years old. 
+                        However, there are numerous fans pointed into the pews, which help to keep it cool. At the Polish Home, yes there will be air-conditioning!
+                    </p>
+                    </div>
+                    
+                </details>
+
+                <details>
+                    <summary>Are the venues accessible?</summary>
+                    <div class="answer">
+                    <p>Yes! The church has a ramp at the front entrance, and the Polish Home has a ramp leading to the bar, through which guests can access the main reception hall.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What do I do if I have a dietary restriction?</summary>
+                    <div class="answer">
+                    <p>Please note it on your RSVP form and we will accommodate for it.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>What Polish traditions should I know about?</summary>
+                    <div class="answer">
+                        <p>
+                            Our reception will include a few Polish wedding traditions. No experience needed,
+                            just join in!
+                        </p>
+
+                        <ul class="mass-guide">
+                            <li><strong>Powitanie Chlebem i Solą (Welcome with Bread & Salt):</strong> When we arrive at the reception, our families will
+                                greet us with bread and salt. The bread represents the wish that we will never go
+                                hungry, and the salt reminds us that life will have its hardships, which we will
+                                learn to face together.</li>
+
+                            <li><strong>Vodka & Water Shot:</strong> Following the bread and salt, we will also be given one shot glass each: one will contain vodka, the other water.
+                            We will both drink, and then smash the glasses. The person who gets vodka is predicted to "wear the pants" in the marriage.</li>
+
+                            <li><strong>Oczepiny:</strong> Traditionally, this was the time of the wedding where the bride's veil was removed as a symbol of her becoming a wife. 
+                            In modern times, this part of the wedding is for some fun wedding games run by the DJ and MC!</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <div class="divider">✠</div>
 
            <!-- RSVP -->
             <section id="rsvp">
@@ -235,15 +455,15 @@
 
 
                 <p>
-                    Please RSVP by...
+                    Please RSVP by... -> WORK IN PROGRESS
                 </p>
 
                 <a href="GOOGLE_FORM_URL">
-                    RSVP FORM LINK
+                    RSVP FORM LINK -> NOT ACTIVE YET!!
                 </a>
             </section>
 
-            <div class="divider">✦</div>
+            <div class="divider">✠</div>
     </main>
 
 <footer>

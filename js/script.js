@@ -1,5 +1,5 @@
 // PASSWORD GATE
-const PASSWORD = "";
+const PASSWORD = "wesele";
 
 document.getElementById("gate-form").addEventListener("submit", function (e) {
     e.preventDefault(); // stops the form from reloading the page
