@@ -532,3 +532,119 @@ header nav .dropdown-menu a:hover {
 html {
     scroll-padding-top: 90px; /* stops the fixed header from covering jump targets */
 }
+
+
+
+
+
+
+/* ===== MOBILE ===== */
+
+#menu-toggle {
+    display: none;            /* hidden on big screens */
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #cdb491;
+    cursor: pointer;
+    padding: 0;
+}
+
+header.scrolled #menu-toggle {
+    color: black;
+}
+
+/* --- Nav becomes a hamburger menu --- */
+@media (max-width: 1200px) {
+    header {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    header.menu-open {
+        background-color: rgba(248, 245, 239, 0.97);
+    }
+
+    header.menu-open #menu-toggle,
+    header.menu-open nav a {
+        color: #5a3b2f;
+    }
+
+    nav a {
+        font-size: 22px;
+    }
+
+    /* Dropdown links always shown, indented under Wedding Information */
+    .dropdown-menu {
+        display: flex;
+        position: static;
+        background: transparent;
+        border: none;
+        min-width: 0;
+        padding: 0 0 0 18px;
+    }
+
+    header nav .dropdown-menu a {
+        font-size: 18px;
+        padding: 4px 0;
+    }
+}
+
+/* --- Content layout for phones --- */
+@media (max-width: 800px) {
+    #info {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 10px 5% 60px;
+    }
+
+    section h2 {
+        font-size: 36px;
+        margin: 50px 0 25px;
+    }
+
+    section:not(#home) p,
+    .mass-guide li {
+        font-size: 19px;
+    }
+
+    strong:not(.dress) {
+        font-size: 21px;
+    }
+
+    #info > div.card {
+        padding: 20px;
+    }
+
+    #home h1,
+    #gate h1 {
+        font-size: 42px;
+    }
+
+    #faq summary {
+        font-size: 21px;
+        padding: 14px 16px;
+    }
+
+    .divider {
+        margin: 40px auto;
+    }
+}

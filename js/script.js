@@ -22,6 +22,26 @@ document.getElementById("gate-form").addEventListener("submit", function (e) {
 // find first element w/ CSS selector "header"
 const header = document.querySelector("header");
 
+// -- mobile menu --
+const menuToggle = document.getElementById("menu-toggle");
+const siteNav = document.getElementById("site-nav");
+
+function setMenu(open) {
+    siteNav.classList.toggle("open", open);
+    header.classList.toggle("menu-open", open);
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.textContent = open ? "✕" : "☰";
+}
+
+menuToggle.addEventListener("click", () => {
+    setMenu(!siteNav.classList.contains("open"));
+});
+
+// close the menu after tapping a link
+siteNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => setMenu(false));
+});
+
 // find element with this id (#home)
 const home = document.querySelector("#home");
 
