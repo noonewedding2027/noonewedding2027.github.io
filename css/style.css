@@ -465,6 +465,100 @@ section {
     background-color: #f8f5ef;
 }
 
+/* RSVP */
+#rsvp {
+    min-height: calc(100vh - 90px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#rsvp p.rsvp-deadline {
+    font-size: 26px;
+    font-style: italic;
+    text-align: center;
+}
+
+.rsvp-deadline span {
+    color: #a34545;
+    font-weight: 700;
+}
+
+#rsvp a.rsvp-button {
+    display: inline-block;
+    margin: 20px 0 40px;
+    padding: 16px 48px;
+    background-color: #cdb491;
+    color: white;
+    font-family: Cormorant Garamond, serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: 1px solid #cdb491;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#rsvp a.rsvp-button:hover {
+    background-color: white;
+    color: #a34545;
+}
+
+.rsvp-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.rsvp-steps li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+    font-family: Cormorant Garamond, serif;
+    font-size: 21px;
+    font-weight: 600;
+    color: #5a3b2f;
+}
+
+/* The numbered circles */
+.rsvp-steps li span {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #cdb491;
+    border-radius: 50%;
+    color: #a34545;
+}
+
+#rsvp p.rsvp-note {
+    font-size: 22px;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+#rsvp ul.rsvp-notes {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 1.2em;
+    text-align: left;
+}
+
+#rsvp ul.rsvp-notes li {
+    font-family: Cormorant Garamond, serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #5a3b2f;
+    margin-bottom: 10px;
+}
+
+
 .divider {
     display: flex;
     align-items: center;
