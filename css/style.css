@@ -95,6 +95,20 @@ section:not(#home) p {
 
 }
 
+section#bookmarkReminder {
+    padding: 10px 10%;
+}
+section#bookmarkReminder p {
+    font-family: Cormorant Garamond;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.75;
+    color: #a34545;
+    max-width: 1500px;
+    text-align: center;
+    margin: 0 auto 1.2em;
+}
+
 #home {
     background-image: linear-gradient(
         rgba(25,0,0,0.1),
